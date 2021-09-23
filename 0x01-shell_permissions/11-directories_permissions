@@ -1,3 +1,2 @@
 #!/bin/bash
-#chmod -R u=rw,g=r,o=r .
 find /root/holberton-system_engineering-devops/ -type d -exec chmod 755 {} +
