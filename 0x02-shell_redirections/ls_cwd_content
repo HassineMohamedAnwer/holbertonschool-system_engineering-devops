@@ -1,0 +1,18 @@
+total 56
+drwxr-xr-x 2 root root 291 Sep 27 07:37 .
+drwxr-xr-x 6 root root 139 Sep 27 05:34 ..
+-rwxr--r-- 1 root root  32 Sep 27 04:58 0-hello_world
+-rwxr--r-- 1 root root  28 Sep 27 04:56 1-confused_smiley
+-rwxr--r-- 1 root root  28 Sep 27 04:55 1-confused_smiley~
+-rwxr--r-- 1 root root  28 Sep 27 05:00 2-hellofile
+-rwxr--r-- 1 root root  39 Sep 27 05:16 3-twofiles
+-rwxr--r-- 1 root root  29 Sep 27 05:21 4-lastlines
+-rwxr--r-- 1 root root  29 Sep 27 05:24 5-firstlines
+-rwxr--r-- 1 root root  36 Sep 27 05:35 6-third_line
+-rwxr--r-- 1 root root 130 Sep 27 07:23 7-file
+-rwxr--r-- 1 root root  71 Sep 27 05:47 7-file~
+-rwxr--r-- 1 root root  36 Sep 27 07:36 8-cwd_state
+-rw-r--r-- 1 root root 800 Sep 27 05:29 iacta
+-rw-r--r-- 1 root root   0 Sep 27 07:37 ls_cwd_content
+-rw-r--r-- 1 root root 113 Sep 27 05:12 README.md
+-rw-r--r-- 1 root root   4 Sep 27 05:47 sales.txt
