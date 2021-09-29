@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -name "*" | cut -c 3- | head -10
+find -type f -name "*" | ls -t | head -10
