@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#display files names list after -
+for x in *
+do
+	echo "$x" | cut -d"-" -f2
+done
