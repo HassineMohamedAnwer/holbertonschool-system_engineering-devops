@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+counter=1
+hour=0
+echo "Hour: $hour"
+while [ $hour -le 12 ]
+do
+	echo "$counter"
+	case $counter in
+
+	59)
+		counter=0
+		((hour++))
+		echo "Hour: $hour"
+		;;
+
+	*)
+	esac
+	((counter++))
+done
