@@ -6,15 +6,14 @@ echo "Hour: $hour"
 while [ $hour -le 12 ]
 do
 	echo "$counter"
-	case $counter in
-
-	59)
+	if [ $counter = 59 ]
+	then
 		counter=0
 		((hour++))
-		echo "Hour: $hour"
-		;;
-
-	*)
-	esac
+		if [ $hour != 13 ]
+		then
+			echo "Hour: $hour"
+		fi
+	fi
 	((counter++))
 done
