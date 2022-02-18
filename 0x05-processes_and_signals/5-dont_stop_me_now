@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#kill 4's process
+file=$(pgrep -f to_infinity_and_beyond)
+kill "$file"
