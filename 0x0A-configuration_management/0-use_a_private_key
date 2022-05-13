@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# bash script
+
+ssh -i ~/.ssh/school ubuntu@35.231.107.90
