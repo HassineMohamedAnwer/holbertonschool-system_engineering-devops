@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Installhaproxy
+sudo add-apt-repository ppa:vbernat/haproxy-1.7
+sudo apt install -y haproxy
+sudo echo "ENABLED=1" /etc/default/haproxy
+echo "
+frontend load_balancer
+    bind *:80
+    mode http
+    default_backend webserver
+backend webserver
+    balance roundrobin
+    server 3677-web-01 35.231.107.90:80 check
+    server 3677-web-02 34.148.57.17:80 check
+" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
