@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#get apache running
+#docker build
+#docker push
+#Start your image
+#docker port container Id
+sudo service apache2 restart
