@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+#aliiii
 domain=$1
 subdomain=$2
 sub=( www lb-01 web-01 web-02 )
