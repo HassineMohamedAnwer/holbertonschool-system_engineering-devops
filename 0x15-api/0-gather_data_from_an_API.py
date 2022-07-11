@@ -8,23 +8,23 @@ if __name__ == "__main__":
 
     completed = 0
     totalTasks = 0
-
+    title = []
     userId = sys.argv[1]
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                        .format(userId))
+                        .format(userId)).json()
 
-    name = user.json().get('name')
+    name = user.get('name')
 
-    todos = requests.get('https://jsonplaceholder.typicode.com/todos')
+    todos = requests.get('https://jsonplaceholder.typicode.com/todos').json()
 
-    for task in todos.json():
+    for task in todos:
         if task.get('userId') == int(userId):
-            totalTasks += 1
             if task.get('completed'):
+                title.append(task['title'])
                 completed += 1
-
+            totalTasks +=1
     print('Employee {} is done with tasks({}/{}):'
           .format(name, completed, totalTasks))
 
-    print('\n'.join(["\t " + task.get('title') for task in todos.json()
-          if task.get('userId') == int(userId) and task.get('completed')]))
+    for i in title:
+        print("\t {}".format(i))
