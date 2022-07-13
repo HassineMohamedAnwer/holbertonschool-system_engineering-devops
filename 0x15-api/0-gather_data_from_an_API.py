@@ -28,4 +28,4 @@ if __name__ == "__main__":
           .format(name, completed, totalTasks))
 
     for i in tasksTitles:
-        print("     {}".format(i))
+        print("\t {}".format(i))
