@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+#Nginx return a web page and HTTP 200 on port 80
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
