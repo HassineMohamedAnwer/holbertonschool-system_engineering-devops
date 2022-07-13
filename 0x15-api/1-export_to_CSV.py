@@ -7,15 +7,16 @@ import sys
 
 if __name__ == "__main__":
 
-    userId = str(sys.argv[1])
+    id = str(sys.argv[1])
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                        .format(userId)).json()
-    todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
-    filename = userId + '.csv'
-    with open(filename, mode='w') as f:
+                        .format(id)).json()
+    uname = user.get('username')
+    todos = requests.get('https://jsonplaceholder.typicode.com/todos').json()
+
+    filename = id + '.csv'
+    with open(filename, 'w') as f:
         csv_writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in todos:
-            if task.get('userId') == int(userId):
-                csv_writer.writerow([userId, user.get('username'),
-                                    str(task.get('completed')),
-                                    task.get('title')])
+            if task.get('userId') == int(id):
+                csv_writer.writerow([id, uname, task.get('completed'),
+                                 task.get('title')])
