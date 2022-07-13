@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     name = user.get('name')
 
-    todos = requests.get('https://jsonplaceholder.typicode.com/todos').json()
+    todos = requests.get('https://jsonplaceholder.typicode.com/todos/').json()
 
     for task in todos:
         if task.get('userId') == int(userId):
@@ -28,4 +28,4 @@ if __name__ == "__main__":
           .format(name, completed, totalTasks))
 
     for i in tasksTitles:
-        print("\t {}".format(i))
+        print("     {}".format(i))
