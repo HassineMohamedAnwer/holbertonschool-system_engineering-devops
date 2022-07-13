@@ -11,7 +11,8 @@ if __name__ == "__main__":
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                         .format(userId)).json()
     todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
-    with open('{}.csv'.format(userId), 'w') as f:
+    filename = userId + '.csv'
+    with open('filename, 'w') as f:
         csv_writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in todos:
             if task.get('userId') == int(userId):
