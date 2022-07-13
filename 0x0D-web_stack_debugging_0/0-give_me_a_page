@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 #docker container
 sudo service apache2 start
+echo "Hello Holberton" > /var/www/html/index.html
+
