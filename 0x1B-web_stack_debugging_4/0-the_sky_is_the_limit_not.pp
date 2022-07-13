@@ -1,10 +1,9 @@
 #update requests limit nginx
-exec{ 'fix--for-nginx':
-    command => 'echo "ULIMIT=\"-n 2000\"" > /etc/default/nginx',
-    path    => '/usr/local/bin/:/bin/',
+exec { 'fix--for-nginx':
+  command => "sed -i 'worker_processes 1;' /etc/nginx/nginx.conf; sudo service nginx restart",
+  path    => ['/bin', '/usr/bin', '/usr/sbin']
 }
-
-exec { 'ngnx reload':
+exec { 'ngnx-reload':
   command => 'systemctl reload nginx',
   path    => '/lib/systemd/system'
 }
