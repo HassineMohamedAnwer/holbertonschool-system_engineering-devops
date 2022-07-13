@@ -2,4 +2,4 @@
 #Nginx return a web page and HTTP 200 on port 80
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
-service nginx stop
+pkill nginx
