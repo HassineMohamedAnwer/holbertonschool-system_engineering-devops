@@ -23,7 +23,7 @@ if __name__ == "__main__":
             if task.get('completed'):
                 tasksTitles.append(task['title'])
                 completed += 1
-            totalTasks +=1
+            totalTasks += 1
     print('Employee {} is done with tasks({}/{}):'
           .format(name, completed, totalTasks))
 
