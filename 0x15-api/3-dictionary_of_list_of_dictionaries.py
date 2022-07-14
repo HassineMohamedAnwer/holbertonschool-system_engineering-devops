@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Exports data"""
+""" Exports data """
 
 if __name__ == "__main__":
     import json
