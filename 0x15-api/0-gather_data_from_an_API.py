@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""gather data from an api"""
+"""using REST API, for a given employee ID,
+returns information about his/her TODO list progress."""
 
 import requests
 import sys
