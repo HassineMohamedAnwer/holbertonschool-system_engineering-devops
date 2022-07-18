@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""queries the Reddit API and returns a list """
+""" queries the Reddit API and returns a list recursively """
 
 import requests
 
@@ -9,7 +9,7 @@ def recurse(subreddit, list=[], count=0, after=None):
     req = requests.get("https://www.reddit.com/r/{}/hot.json"
                        .format(subreddit),
                        params={"count": count, "after": after},
-                       headers={"User-Agent": "Aziz"},
+                       headers={"User-Agent": "Anwer"},
                        allow_redirects=False)
 
     if req.status_code >= 400:
